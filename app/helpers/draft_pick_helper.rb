@@ -1,0 +1,2 @@
+module DraftPickHelper
+end

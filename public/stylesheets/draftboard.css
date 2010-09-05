@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+	height: 100%;
+	padding 10px;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'Lucida Grande',
+        Verdana, Lucida, Geneva, Helvetica,
+        Arial, sans-serif;
+}
+
+.rounded {
+	border: 1px solid #ccc;
+	border-radius: 5px; /* IE9, Opera 10.5 */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -moz-border-radius: 5px; /* Firefox */
+}
+
+#draft_board {
+	width: 100%;
+	padding: 5px;
+}
+
+.qb {
+	background-color: red;
+	color: white;
+}
+
+.rb {
+	background-color: blue;
+	color: white;
+}
+
+.wr {
+	background-color: green;
+	color: black;
+}
+
+.def {
+	background-color: orange;
+	color: black;	
+}
+
+.k {
+	background-color: pink;
+	color: white;	
+}
+
+

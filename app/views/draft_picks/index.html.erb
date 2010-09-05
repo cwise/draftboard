@@ -1,0 +1,16 @@
+<table id="draft_board">
+  <tr>
+    <%= content_tag :th, 'Round', :class => 'rounded' %>
+    <%= render :partial => 'poolie', :collection => @poolies %>
+  </tr>
+  <% for round in @rounds %>
+    <tr>
+      <%= content_tag :th, round[0], :class => 'rounded' %>
+      <% this_round=round[1] %>
+      <% for poolie in @poolies %>
+        <% this_pick=this_round.detect{|draft_pick| draft_pick.poolie_id==poolie.id} %>
+        <%= content_tag :td, this_pick.nil? ? "" : this_pick.player.name, :class => "rounded #{this_pick.nil? ? "" : this_pick.player.position.downcase}" %>
+      <% end %>      
+    </tr>  
+  <% end %>
+</table>

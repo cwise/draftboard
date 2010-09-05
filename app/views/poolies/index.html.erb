@@ -1,0 +1,6 @@
+<ol>
+  <%= render :partial => 'poolie', :collection => @poolies %>
+</ol>
+
+
+<%= link_to 'Randomize Draft Order', randomize_draft_order_poolies_path, :method => :post %>

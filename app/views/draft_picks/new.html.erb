@@ -1,0 +1,10 @@
+<%= form_for @draft_pick do |f| %>
+  <%= content_tag :label, 'Round' %><br/>
+  <%= @draft_pick.round %><br/>
+  <%= f.hidden_field :round %><br/>  
+  <%= content_tag :label, 'Pick' %><br/>
+  <%= @draft_pick.poolie.name %>
+  <%= f.hidden_field :poolie_id %><br/>  
+  <%= f.collection_select :player_id, @available_players, :id, :full_name %>
+  <%= f.submit 'Save Pick' %>
+<% end %>
