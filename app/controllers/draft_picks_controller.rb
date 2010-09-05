@@ -14,7 +14,7 @@ class DraftPicksController < ApplicationController
     @draft_pick=DraftPick.new(params[:draft_pick])
     @draft_pick.save
     
-    redirect_to new_draft_picks_path
+    redirect_to new_draft_pick_path
   end
   
   def index
