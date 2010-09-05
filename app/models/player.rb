@@ -6,4 +6,8 @@ class Player < ActiveRecord::Base
   def full_name
     "#{name} (#{position}/#{team})"
   end
+  
+  def partial_name
+    "#{name} (#{team})"
+  end  
 end

@@ -1,3 +1,10 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag 'refresh.js' %>
+  <script type="text/javascript">
+    window.setInterval("refresh()", 1000*15);
+  </script>
+<% end %>
+
 <table id="draft_board">
   <tr>
     <%= content_tag :th, 'Round', :class => 'rounded' %>
@@ -9,7 +16,7 @@
       <% this_round=round[1] %>
       <% for poolie in @poolies %>
         <% this_pick=this_round.detect{|draft_pick| draft_pick.poolie_id==poolie.id} %>
-        <%= content_tag :td, this_pick.nil? ? "" : this_pick.player.name, :class => "rounded #{this_pick.nil? ? "" : this_pick.player.position.downcase}" %>
+        <%= content_tag :td, this_pick.nil? ? "" : this_pick.player.partial_name, :class => "rounded #{this_pick.nil? ? "" : this_pick.player.position.downcase}" %>
       <% end %>      
     </tr>  
   <% end %>
