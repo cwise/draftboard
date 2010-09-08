@@ -20,7 +20,7 @@ unless Poolie.exists?
   Poolie.create(:name => 'Scott Drover', :team_name => 'Drover''s Drivers', :draft_order => 0)
   Poolie.create(:name => 'Darcy Ferron', :team_name => 'Chez Paree 69ers', :draft_order => 0)
   Poolie.create(:name => 'Jared Rosenfeld', :team_name => 'Marino''s Man Food', :draft_order => 0)
-  Poolie.create(:name => 'Joey Mousseau', :team_name => 'LongCocks', :draft_order => 0)
+  Poolie.create(:name => 'Trevor Atchison', :team_name => 'Redneck Express', :draft_order => 0)
   Poolie.create(:name => 'Wes Blight', :team_name => 'Fleet Feet', :draft_order => 0)
   Poolie.create(:name => 'Brad Wood', :team_name => 'Sunday Morning Wood', :draft_order => 0)
   Poolie.create(:name => 'Travis Gloyn', :team_name => 'The Hitmen Humpers', :draft_order => 0)
