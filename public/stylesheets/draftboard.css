@@ -49,4 +49,6 @@ body {
 	color: black;	
 }
 
-
+li.not_available {
+	color: #D0D0D0;
+}

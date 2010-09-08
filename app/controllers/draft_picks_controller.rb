@@ -22,4 +22,11 @@ class DraftPicksController < ApplicationController
     @picks=DraftPick.draft_order.all
     @rounds=@picks.group_by {|dp| dp.round}
   end
+  
+  def delete_last_pick
+    last_pick=DraftPick.last
+    last_pick.delete if last_pick
+    
+    redirect_to new_draft_pick_path
+  end
 end

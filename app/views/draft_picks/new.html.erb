@@ -1,3 +1,5 @@
+<%= link_to 'Delete Last Pick', delete_last_pick_draft_picks_path, :method => :post %>
+
 <%= form_for @draft_pick do |f| %>
   <%= content_tag :label, 'Round' %><br/>
   <%= @draft_pick.round %><br/>
