@@ -1,16 +1,31 @@
 unless Poolie.exists?
-  Poolie.create(:name => 'Chris Wise', :team_name => 'Wise Asses', :draft_order => 1)
-  Poolie.create(:name => 'Paul Wong', :team_name => 'Stupid Dawgs', :draft_order => 2)
-  Poolie.create(:name => 'Mike Peralta', :team_name => 'Mikey Peraltas', :draft_order => 3)
-  Poolie.create(:name => 'Craig Kavanagh', :team_name => 'Craigbots', :draft_order => 4)
-  Poolie.create(:name => 'Dan Pascoli', :team_name => 'Camp Holdouts', :draft_order => 5)
-  Poolie.create(:name => 'Dave Bisson', :team_name => 'Da Wanabe Ladies Man', :draft_order => 6)
-  Poolie.create(:name => 'Rainy Jodoin', :team_name => 'X-Rated', :draft_order => 7)
-  Poolie.create(:name => 'Jesse Fleming', :team_name => 'Big Poppa', :draft_order => 8)
-  Poolie.create(:name => 'Louis-Martin Parent', :team_name => 'Crackton United', :draft_order => 9)
-  Poolie.create(:name => 'Chris Maloney', :team_name => 'Fancy Lions', :draft_order => 10)
-  Poolie.create(:name => 'Marc Pascoli', :team_name => 'Stallions', :draft_order => 11)
-  Poolie.create(:name => 'Fred Cooke', :team_name => 'The Godfather', :draft_order => 12)
+#  Poolie.create(:name => 'Chris Wise', :team_name => 'Wise Asses', :draft_order => 1)
+#  Poolie.create(:name => 'Paul Wong', :team_name => 'Stupid Dawgs', :draft_order => 2)
+#  Poolie.create(:name => 'Mike Peralta', :team_name => 'Mikey Peraltas', :draft_order => 3)
+#  Poolie.create(:name => 'Craig Kavanagh', :team_name => 'Craigbots', :draft_order => 4)
+#  Poolie.create(:name => 'Dan Pascoli', :team_name => 'Camp Holdouts', :draft_order => 5)
+#  Poolie.create(:name => 'Dave Bisson', :team_name => 'Da Wanabe Ladies Man', :draft_order => 6)
+#  Poolie.create(:name => 'Rainy Jodoin', :team_name => 'X-Rated', :draft_order => 7)
+#  Poolie.create(:name => 'Jesse Fleming', :team_name => 'Big Poppa', :draft_order => 8)
+#  Poolie.create(:name => 'Louis-Martin Parent', :team_name => 'Crackton United', :draft_order => 9)
+#  Poolie.create(:name => 'Chris Maloney', :team_name => 'Fancy Lions', :draft_order => 10)
+#  Poolie.create(:name => 'Marc Pascoli', :team_name => 'Stallions', :draft_order => 11)
+#  Poolie.create(:name => 'Fred Cooke', :team_name => 'The Godfather', :draft_order => 12)
+end
+
+unless Poolie.exists?
+  Poolie.create(:name => 'Craig Kavanagh', :team_name => 'Craigbots', :draft_order => 0)
+  Poolie.create(:name => 'Jaeme Gloyn', :team_name => 'Jaeme _ Gloyn', :draft_order => 0)
+  Poolie.create(:name => 'Jeremy Lendvay', :team_name => 'Officer McClusky', :draft_order => 0)
+  Poolie.create(:name => 'Scott Drover', :team_name => 'Drover''s Drivers', :draft_order => 0)
+  Poolie.create(:name => 'Darcy Ferron', :team_name => 'Chez Paree 69ers', :draft_order => 0)
+  Poolie.create(:name => 'Jared Rosenfeld', :team_name => 'Marino''s Man Food', :draft_order => 0)
+  Poolie.create(:name => 'Joey Mousseau', :team_name => 'LongCocks', :draft_order => 0)
+  Poolie.create(:name => 'Wes Blight', :team_name => 'Fleet Feet', :draft_order => 0)
+  Poolie.create(:name => 'Brad Wood', :team_name => 'Sunday Morning Wood', :draft_order => 0)
+  Poolie.create(:name => 'Travis Gloyn', :team_name => 'The Hitmen Humpers', :draft_order => 0)
+  Poolie.create(:name => 'Andrew Gowing', :team_name => 'The Gowningnators', :draft_order => 0)
+  Poolie.create(:name => 'Josh Moore', :team_name => 'josh', :draft_order => 0)
 end
 
 unless Player.exists?
