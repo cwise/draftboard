@@ -30,7 +30,7 @@ class Player < ActiveRecord::Base
         team.upcase!
         
         player_name=row['PlayerName']
-        all_positions=row['PlayerPosition'].split('/').map{|pos| pos=='FB' ? 'RB' : pos}.select{|pos| VALID_POSITIONS.include?(pos)}
+        all_positions=row['PlayerPosition'].split('/').map{|pos| pos=='FB' ? 'RB' : pos}.map{|pos| pos=='KFG' ? 'K' : pos}.select{|pos| VALID_POSITIONS.include?(pos)}
         position=all_positions.first
         
         if position
