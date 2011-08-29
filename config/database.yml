@@ -1,20 +1,11 @@
 development:
   adapter: mysql2
   database: draftboard_dev
-  host: smyth100.local
-  username: root
-  password: upandatom
 
 test:
     adapter: mysql2
     database: draftboard_test
-    host: smyth100.local
-    username: root
-    password: upandatom
 
 production:
     adapter: mysql2
     database: draftboard_prod
-    host: smyth100.local
-    username: root
-    password: upandatom
