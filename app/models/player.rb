@@ -5,6 +5,7 @@ class Player < ActiveRecord::Base
   scope :not_drafted, where("id NOT IN (SELECT player_id FROM draft_picks)")
   scope :drafted, where("id IN (SELECT player_id FROM draft_picks)")
   scope :position, lambda {|pos| where(['position = ?', pos])}
+  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ?", "%#{q}%"])}  
   
   VALID_POSITIONS=%w{QB RB WR TE K}
   
@@ -44,4 +45,8 @@ class Player < ActiveRecord::Base
     
     "File #{filename} imported: added #{added} skipped #{skipped}"
   end
+  
+  def autocomplete_response
+     {"id" => id, "label" => name, "value" => name}
+  end  
 end

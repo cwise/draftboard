@@ -2,6 +2,7 @@ class DraftPick < ActiveRecord::Base
   belongs_to :poolie
   belongs_to :player
   before_save :set_pick_number
+  attr_accessor :player_name
   scope :draft_order, order(:pick)
   
   def self.current_round
@@ -19,4 +20,8 @@ class DraftPick < ActiveRecord::Base
   def set_pick_number
     self.pick=DraftPick.current_pick
   end
+  
+  def player_name
+    player ? player.name : ''
+  end  
 end

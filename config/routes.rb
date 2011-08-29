@@ -5,7 +5,12 @@ Draftboard::Application.routes.draw do
     end    
   end
   
-  resources :players
+  resources :players do
+    collection do
+      get :search     
+    end
+  end
+  
   resources :poolies
 
   resource :poolies do

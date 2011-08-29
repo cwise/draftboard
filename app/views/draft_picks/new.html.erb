@@ -1,3 +1,20 @@
+<%= content_for :javascript_includes do %>
+  <script type="text/javascript">
+    $(function() {
+      $('#draft_pick_player_name').live('focus', function(i){
+        $(this).autocomplete({
+          source: '/players/search',
+          select: function(event, ui) {
+            $(this).val(ui.item.value);
+            $('#draft_pick_player_id').val(ui.item.id);
+            return false;
+          }
+        });
+      });
+    });
+  </script>
+<% end %>
+
 <%= link_to 'Delete Last Pick', delete_last_pick_draft_picks_path, :method => :post %>
 
 <%= form_for @draft_pick do |f| %>
@@ -7,6 +24,7 @@
   <%= content_tag :label, 'Pick' %><br/>
   <%= @draft_pick.poolie.name %>
   <%= f.hidden_field :poolie_id %><br/>  
-  <%= f.collection_select :player_id, @available_players, :id, :full_name %>
+  <%= f.hidden_field :player_id %><br/>    
+  <%= f.text_field :player_name %>
   <%= f.submit 'Save Pick' %>
 <% end %>
