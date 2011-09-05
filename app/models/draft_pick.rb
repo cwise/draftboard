@@ -4,6 +4,8 @@ class DraftPick < ActiveRecord::Base
   before_save :set_pick_number
   attr_accessor :player_name
   scope :draft_order, order(:pick)
+  scope :round, lambda {|round| where(:round => round)}
+  validates :player_id, :presence => true
   
   def self.current_round
     poolie_count=Poolie.count

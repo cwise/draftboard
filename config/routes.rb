@@ -1,7 +1,12 @@
 Draftboard::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :draft_picks do
     collection do
-      post :delete_last_pick
+      delete :delete_last
+      delete :reset
     end    
   end
   
@@ -12,12 +17,6 @@ Draftboard::Application.routes.draw do
   end
   
   resources :poolies
-
-  resource :poolies do
-    member do
-      post :randomize_draft_order
-    end    
-  end  
   
   root :to => "draft_picks#index"
 end

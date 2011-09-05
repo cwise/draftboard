@@ -47,3 +47,7 @@ unless Player.exists?(:position => 'DEF')
   Player.create(:position => 'DEF', :name => 'Tennessee Titans', :team => 'TEN')
   Player.create(:position => 'DEF', :name => 'Washington Redskins', :team => 'WAS')
 end
+
+unless AdminUser.exists?
+  AdminUser.create!(:email => 'cwise@murmurinformatics.com', :password => 'nutmeg', :password_confirmation => 'nutmeg')
+end

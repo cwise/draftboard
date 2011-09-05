@@ -23,10 +23,17 @@ class DraftPicksController < ApplicationController
     @rounds=@picks.group_by {|dp| dp.round}
   end
   
-  def delete_last_pick
+  def delete_last
     last_pick=DraftPick.last
     last_pick.delete if last_pick
     
-    redirect_to new_draft_pick_path
+    redirect_to admin_dashboard_path
   end
+  
+  def reset
+    DraftPick.destroy_all
+    Poolie.randomize_draft_order
+    
+    redirect_to admin_dashboard_path
+  end  
 end

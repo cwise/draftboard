@@ -11,11 +11,11 @@
           }
         });
       });
+      
+      $('#draft_pick_player_name').focus();
     });
   </script>
 <% end %>
-
-<%= link_to 'Delete Last Pick', delete_last_pick_draft_picks_path, :method => :post %>
 
 <%= form_for @draft_pick do |f| %>
   <%= content_tag :label, 'Round' %><br/>
@@ -25,6 +25,8 @@
   <%= @draft_pick.poolie.name %>
   <%= f.hidden_field :poolie_id %><br/>  
   <%= f.hidden_field :player_id %><br/>    
-  <%= f.text_field :player_name %>
-  <%= f.submit 'Save Pick' %>
+  <%= f.text_field :player_name %><br/>
+  <%= f.submit 'Save Pick', :class => 'button' %>
 <% end %>
+
+<%= link_to 'Back to Admin', admin_dashboard_path %>
