@@ -5,7 +5,7 @@ class Player < ActiveRecord::Base
   scope :not_drafted, where("id NOT IN (SELECT player_id FROM draft_picks)")
   scope :drafted, where("id IN (SELECT player_id FROM draft_picks)")
   scope :position, lambda {|pos| where(['position = ?', pos])}
-  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ?", "%#{q}%"])}  
+  scope :search, lambda {|q| q.blank? ? scoped : where(["lower(name) LIKE ?", "%#{q.downcase}%"])}  
   
   VALID_POSITIONS=%w{QB RB WR TE K}
   
