@@ -51,7 +51,11 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    haml (3.1.2)
     has_scope (0.5.1)
+    hassle (0.0.1)
+      haml
+      rack
     i18n (0.5.0)
     inherited_resources (1.2.2)
       has_scope (~> 0.5.0)
@@ -108,5 +112,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  hassle
   mysql2 (= 0.2.7)
   rails (= 3.0.9)
