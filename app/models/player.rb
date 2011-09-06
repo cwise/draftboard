@@ -47,6 +47,6 @@ class Player < ActiveRecord::Base
   end
   
   def autocomplete_response
-     {"id" => id, "label" => name, "value" => name}
+     {"id" => id, "label" => full_name, "value" => full_name}
   end  
 end
