@@ -5,6 +5,8 @@ ActiveAdmin::Dashboards.build do
       para link_to('Delete Last Pick', delete_last_draft_picks_path, :method => :delete, :confirm => 'Are you sure you want to delete the last pick?', :class => 'button')
       para link_to('Make Picks', new_draft_pick_path, :class => 'button')
       para link_to('Open Draftboard', draft_picks_path, :target => '_blank', :class => 'button')
+      para link_to('Players', admin_players_path, :class => 'button')
+      para link_to('Poolies', admin_poolies_path, :class => 'button')
     end    
   end
 
