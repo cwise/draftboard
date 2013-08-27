@@ -1,3 +1,5 @@
 == NFL Draftboard
 
 This is an application for drafting players.
+
+I got the data scraping Yahoo with Nokogiri, but local files. Sigh.
