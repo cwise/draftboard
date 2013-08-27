@@ -6,6 +6,7 @@ gem 'httparty'
 gem 'jquery-rails', '< 3.0.0'
 gem 'nokogiri'
 gem 'pg'
+gem 'unicorn'
 
 group :assets do
   gem 'sass-rails', " ~> 3.2.0"
