@@ -1,7 +1,7 @@
 <%= content_for :javascript_includes do %>
   <script type="text/javascript">
     $(function() {
-      $('#draft_pick_player_name').live('focus', function(i){
+      $(document).on('focus', '#draft_pick_player_name', function(i){
         $(this).autocomplete({
           source: '/players/search',
           select: function(event, ui) {
