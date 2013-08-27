@@ -1,4 +1,5 @@
 .sass-cache/
 .DS_Store
+_heroku_env.rb
 tmp/
 log/

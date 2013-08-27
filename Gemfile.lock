@@ -61,7 +61,6 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    espn_rb (0.0.5)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastercsv (1.5.5)
@@ -71,6 +70,9 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.5)
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -92,7 +94,11 @@ GEM
       activesupport (~> 3.1)
       polyamorous (~> 0.5.0)
     mime-types (1.24)
+    mini_portile (0.5.1)
     multi_json (1.7.9)
+    multi_xml (0.5.5)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
     pg (0.16.0)
     polyamorous (0.5.0)
@@ -153,8 +159,9 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (= 0.5.1)
   coffee-rails (~> 3.2.0)
-  espn_rb
+  httparty
   jquery-rails (< 3.0.0)
+  nokogiri
   pg
   rails (= 3.2.14)
   sass-rails (~> 3.2.0)
